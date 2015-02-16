@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <title>Untitled</title>
+    <title>Game control</title>
 
      <!-- ref:css css/main.min.css -->
     <link href="css/main.css" rel="stylesheet">
@@ -16,16 +16,17 @@
 
   </head>
   <body>
-    <section id="text">
-      <h1>WARNING!</h1>
-      <h2>Incoming object detected!</h2>
-      <h2>Time until impact:</h2>
+
+    <section id="timer">
+      <div id="counter"></div>
+      <button id="start"><img src="res/play.png"></button><button id="pause"><img src="res/pause.png"></button>
+      <h3>Set time</h3>
+      <input type="tel" name="hours" value="1">&nbsp;:&nbsp;<input type="tel" name="minutes" max="59" value="0">&nbsp;:&nbsp;<input type="tel" name="seconds" max="59" value="0">
+      <button id="setTime">Set</button>
     </section>
-    <div id="counter"></div>
-    <div id="animation">
-      <img src="res/comet.png" id="comet">
-      <img src="res/earth.png" id="earth">
-    </div>
+    <section id="help">
+      
+    </section>
 
     
     <!-- ref:js js/main.min.js-->

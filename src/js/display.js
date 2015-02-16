@@ -5,11 +5,15 @@
 function Display() {
     that = this;
 
+    this.defaultTime = 3600;
+
     this.build = function() {
+        this.writeTime(this.defaultTime);
         window.addEventListener('tick', function(e){
             var time = e.detail;
             that.writeTime(time);
         });
+
     };
 
 
