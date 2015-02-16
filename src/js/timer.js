@@ -128,7 +128,7 @@ function Timer(){
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             success: function(msg) {
-                console.log(msg);
+                toastr.success('Idő beállítva');
             }
         });
     };

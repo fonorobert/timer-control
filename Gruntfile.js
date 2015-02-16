@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
 		concat: {
 			dep: {
-				src: ['bower_components/jquery/dist/jquery.min.js', 'bower_components/screenfull/dist/screenfull.js'], 
+				src: ['bower_components/jquery/dist/jquery.min.js', 'bower_components/screenfull/dist/screenfull.js', 'bower_components/toastr/toastr.min.js'], 
 				dest: 'dev/js/dependencies.js'
 			},
 			dev: {
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 			},
 			build: {
 				files: {
-					'build/js/main.min.js': ['bower_components/jquery/dist/jquery.min.js', 'bower_components/screenfull/dist/screenfull.js', 'src/js/*.js']
+					'build/js/main.min.js': ['dev/js/dependencies.js', 'src/js/*.js']
 				}
 			}
 		},
