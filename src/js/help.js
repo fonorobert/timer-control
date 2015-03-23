@@ -35,6 +35,9 @@ function Help() {
 
     this.sendMessage = function() {
         var body = own.charReplace($('input[name="message"]').val());
+        var header = own.charReplace($('input[name="header"]').val());
+        var footer = own.charReplace($('input[name="footer"]').val());
+
 
         var minutes = Math.floor(own.timer.remaining % 3600 / 60);
         var hours = Math.floor(own.timer.remaining / 3600); 
@@ -43,7 +46,7 @@ function Help() {
         $.ajax({
             url: own.apiPath + '/printer',
             type: 'POST',
-            data: JSON.stringify({body: body, header: own.header, footer: own.footer}),
+            data: JSON.stringify({body: body, header: header, footer: footer}),
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             success: function(msg) {

@@ -65,8 +65,10 @@ function Timer(){
                 self.remaining -= 1;
                 self.tickEvent();
                 window.setTimeout(self.tick, 1000);
+                return;
             } else {
                 window.setTimeout(self.tick, 1000);
+                return;
             }
         }
     };
