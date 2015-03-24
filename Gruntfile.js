@@ -84,6 +84,7 @@ module.exports = function(grunt) {
 		      // includes files within path
 		      {expand: true, flatten: true, src: ['src/index.html'], dest: 'dev/', filter: 'isFile'},
 		      {expand: true, cwd: 'src/', src: ['res/*'], dest: 'dev/'},
+		      {expand: true, cwd: 'src/', src: ['res/*'], dest: 'build/'},
 		    ],
 		  },
 		},
